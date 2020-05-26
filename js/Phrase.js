@@ -1,36 +1,42 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Phrase.js */
+// Create Phrase class
 class Phrase {
   constructor(phrase) {
     this.phrase = phrase.toLowerCase();
   }
 
+  /**
+   * Display phrase on game board
+   */
   addPhraseToDisplay() {
-    let html = "";
-
     for (let i = 0; i < this.phrase.length; i++) {
-      if (this.phrase[i].match(/[a-z]/)) {
-        html += `<li class="hide letter ${this.phrase[i]}">${this.phrase[i]}</li>`;
+      if (this.phrase[i].match(/[A-Za-z]/)) {
+        phrase.firstElementChild.innerHTML += `<li class="hide letter ${this.phrase[i]}">${this.phrase[i]}</li>`;
       } else if (this.phrase[i].match(/\s/)) {
-        html += `<li class="space"> </li>`;
+        phrase.firstElementChild.innerHTML += `<li class="space"> </li>`;
       }
     }
-    phrase.firstElementChild.innerHTML = html;
   }
 
-  checkLetter(keyPressed) {
+  /**
+   * Checks if passed letter is in phrase
+   * @param (string) letter - Letter to check
+   */
+  checkLetter(letter) {
     let letterExist = [];
     for (let i = 0; i < this.phrase.length; i++) {
-      this.phrase[i] === keyPressed ? letterExist.push(this.phrase[i]) : false;
+      this.phrase[i] === letter ? letterExist.push(this.phrase[i]) : null;
     }
     return letterExist.length > 0 ? true : false;
   }
 
-  showMatchedLetter(displayLetter) {
-    const letter = document.querySelectorAll(".letter");
-    letter.forEach((item) => {
-      if (item.classList.contains(displayLetter)) {
+  /**
+   * Displays passed letter on screen after a match is found
+   * @param (string) letter - Letter to display
+   */
+  showMatchedLetter(letter) {
+    const letterElement = document.querySelectorAll(".letter");
+    letterElement.forEach((item) => {
+      if (item.classList.contains(letter)) {
         item.classList.remove("hide");
         item.classList.add("show");
       }
