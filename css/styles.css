@@ -50,30 +50,41 @@ h1 {
 }
 
 button {
+  width: 45px;
+  height: 45px;
   margin: 8px;
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  color: var(--color-keys);
-  font-size: var(--font-size-medium);
-  background-color: var(--color-keys-light);
+  border: 1px solid black;
   border-radius: 5px;
+  color: #445069;
+  font-size: var(--font-size-medium);
+  background-color: transparent;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
   cursor: pointer;
 }
 
+button:hover {
+  border: 1px solid #ff7730;
+  transform: scale(1.1);
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
 #btn__reset {
   width: 200px;
   margin: 0 auto;
+  background-color: #f7f4f4;
+  color: #ff7730;
+  border: 2px solid white;
+  border-radius: 4px;
   transform: scale(1);
-  transition: all 0.5s;
+  transition: all 0.6s;
 }
 
 #btn__reset:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
-  color: var(--color-start);
+  transform: scale(1.3);
+  transition: all 0.6s;
 }
 
 .main-container {
@@ -83,6 +94,7 @@ button {
   height: 100%;
   max-height: 900px;
   text-align: center;
+  /* background-color: #b7d6bb; */
 }
 
 .section {
@@ -113,10 +125,11 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  transition: all 0.7s;
 }
 
 .space {
-  width: 15px;
+  width: 20px;
 }
 
 .show {
@@ -188,7 +201,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 
 .start a {
