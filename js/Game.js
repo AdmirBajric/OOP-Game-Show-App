@@ -95,7 +95,9 @@ class Game {
    */
   gameOver() {
     overlay.style.display = "inherit";
-    gameOver.innerHTML = this.checkForWin() ? "You Won!" : "You Lose!";
+    gameOver.innerHTML = this.checkForWin()
+      ? "Congrats, You Won!"
+      : "You Lose, Try Again!";
     overlay.classList = this.checkForWin() ? "win" : "lose";
     this.resetGame();
   }
