@@ -73,6 +73,7 @@ button:hover {
 #btn__reset {
   width: 200px;
   margin: 0 auto;
+  margin-top: 40px;
   background-color: #f7f4f4;
   color: #3d2727;
   border: 2px solid white;
@@ -84,7 +85,7 @@ button:hover {
   transition: all 0.3s;
   border: 1px solid;
   padding: 10px;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 20px rgb(71, 71, 71);
 }
 
 .main-container {
