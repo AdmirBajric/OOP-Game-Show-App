@@ -57,7 +57,7 @@ document.addEventListener("keyup", (e) => {
 });
 
 /**
- * The physicalKeyboard function controls the inputs keys on the page
+ * The physicalKeyboard function created to use the same functionality as well as onscreenKeyboard.
  */
 const physicalKeyboard = () => {
   document.addEventListener("keyup", (e) => {
