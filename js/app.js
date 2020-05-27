@@ -33,7 +33,7 @@ startBtn.addEventListener("click", () => {
 
 /**
  * Added EventListener with the event click on all onscreen keyboard buttons
- * Calling the method handleInteraction on the game object, to control yhe game logic
+ * Calling the method handleInteraction on the game object, to control the game logic
  */
 keyboard.forEach((key) => {
   key.addEventListener("click", (e) => {
